@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f7f8f3">
+  <title>오늘 점심 뭐 먹지?</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <main class="app-shell">
+    <section class="card" aria-labelledby="page-title">
+      <header class="hero">
+        <span class="eyebrow"><span class="status-dot"></span> LUNCH PICKER</span>
+        <h1 id="page-title">오늘 점심,<br><span>뭐 먹지?</span></h1>
+        <p>고민은 잠시 내려놓고<br>맛있는 점심을 골라봐요.</p>
+        <span class="hero-illustration" aria-hidden="true">🍜</span>
+      </header>
+
+      <section class="recommendation" aria-live="polite" aria-atomic="true">
+        <div class="result-copy">
+          <span class="section-label">TODAY'S PICK</span>
+          <p id="result">추천 버튼을 눌러보세요!</p>
+        </div>
+        <button class="pick-button" id="pick-button" type="button">
+          <span aria-hidden="true">✦</span> 추천 받기
+        </button>
+      </section>
+
+      <section class="menu-section" aria-labelledby="menu-title">
+        <div class="section-heading">
+          <div>
+            <span class="section-label">YOUR MENU</span>
+            <h2 id="menu-title">메뉴 목록 <span id="menu-count">0</span></h2>
+          </div>
+          <span class="heading-emoji" aria-hidden="true">🥢</span>
+        </div>
+        <form id="menu-form" class="add-form" novalidate>
+          <label class="visually-hidden" for="menu-input">추가할 메뉴 이름</label>
+          <input id="menu-input" name="menu" type="text" maxlength="40" placeholder="새로운 메뉴를 입력해요" autocomplete="off">
+          <button type="submit" aria-label="메뉴 추가">추가 <span aria-hidden="true">＋</span></button>
+        </form>
+        <p id="form-message" class="form-message" aria-live="polite"></p>
+        <ul id="menu-list" class="menu-list" aria-label="등록된 메뉴"></ul>
+      </section>
+      <footer>맛있는 점심시간 되세요 <span aria-hidden="true">♡</span></footer>
+    </section>
+  </main>
+</body>
+</html>
